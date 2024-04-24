@@ -27,6 +27,11 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatSelectModule} from '@angular/material/select';
 import {MatDialogModule} from '@angular/material/dialog';
 
+
+import { ToBinaryPipe } from './_custompipes/binary.pipe';
+import { ExponentialStrengthPipe } from './_custompipes/exponential-strength.pipe';
+import { CalculateAgePipe } from './_custompipes/calculateAge.pipe';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -38,7 +43,10 @@ import {MatDialogModule} from '@angular/material/dialog';
     DynamicAdComponent,
     PipesComponent,
     MobilesComponent,
-    ShoesComponent
+    ShoesComponent,
+    ToBinaryPipe,
+    ExponentialStrengthPipe,
+    CalculateAgePipe
   ],
   imports: [
     BrowserModule,
