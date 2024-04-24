@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import {HttpClientModule} from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -31,6 +32,10 @@ import {MatDialogModule} from '@angular/material/dialog';
 import { ToBinaryPipe } from './_custompipes/binary.pipe';
 import { ExponentialStrengthPipe } from './_custompipes/exponential-strength.pipe';
 import { CalculateAgePipe } from './_custompipes/calculateAge.pipe';
+import { SingleSlotComponent } from './content-projection/single-slot/single-slot.component';
+import { MultiSlotComponent } from './content-projection/multi-slot/multi-slot.component';
+import { ProductDashboardComponent } from './content-projection/product-dashboard/product-dashboard.component';
+import { ProductWidgetComponent } from './content-projection/product-dashboard/product-widget/product-widget.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +51,11 @@ import { CalculateAgePipe } from './_custompipes/calculateAge.pipe';
     ShoesComponent,
     ToBinaryPipe,
     ExponentialStrengthPipe,
-    CalculateAgePipe
+    CalculateAgePipe,
+    SingleSlotComponent,
+    MultiSlotComponent,
+    ProductDashboardComponent,
+    ProductWidgetComponent
   ],
   imports: [
     BrowserModule,
@@ -64,7 +73,8 @@ import { CalculateAgePipe } from './_custompipes/calculateAge.pipe';
     MatSelectModule,
     MatDialogModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

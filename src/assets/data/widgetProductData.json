@@ -1,0 +1,38 @@
+{
+    "Shoes":{
+        "tag":"Shoe clearance sale....",
+        "link":"https://www.amazon.de/s?k=shoes&crid=2NUDEP10W3W2D&sprefix=shoes%2Caps%2C114&ref=nb_sb_noss_1",
+        "productList":[
+            {"product":"sneakers", "price":190},
+            {"product":"gym shoes", "price":30},
+            {"product":"running shoes", "price":55},
+            {"product":"formal shoes", "price":60},
+            {"product":"dancing shoes", "price":70}              
+        ]
+    },
+
+    "Laptops":{
+        "tag":"Brand new laptops!..",
+        "link":"https://www.amazon.de/s?k=laptop&crid=23LNONJNP401K&sprefix=lap%2Caps%2C114&ref=nb_sb_ss_ts-doa-p_1_3",
+        "productList":[
+            {"product":"Lenevo", "price":450},
+            {"product":"Apple", "price":1050},
+            {"product":"HP", "price":650},
+            {"product":"Dell", "price":550},
+            {"product":"Sony", "price":500}            
+        ]
+    },
+
+    "Chairs":{
+        "tag":"Variety of Chairs!...",
+        "link":"https://www.amazon.de/s?k=chairs&__mk_de_DE=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=ZLAJU5ZD7IEL&sprefix=chairs%2Caps%2C138&ref=nb_sb_noss_1",
+        "productList":[
+            {"product":"Study chair", "price":"30"},
+            {"product":"Wooden chair", "price":"20"},
+            {"product":"Cushions", "price":"80"},
+            {"product":"Plastic chair", "price":"10"},
+            {"product":"Massage chair", "price":"90"}
+        ]
+    }
+
+}
