@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { dataShareService } from '../_services/dataShare-ser.service';
 
 @Component({
   selector: 'app-basics',
@@ -12,8 +13,17 @@ export class BasicsComponent {
 
   public disableInput:boolean = true;
   public enteredName!:string;
-  
-  constructor(){}
 
-  ngOnInit(){}
+  public varSharedDataS!:string;
+  
+  constructor(private dataShareS:dataShareService){}
+
+  ngOnInit(){
+    this.varSharedDataS = this.dataShareS.getSharedDataS();
+  }
+
+  updateDataS(){
+    this.dataShareS.setSharedDataS('Shared data via Service updated in basics component');
+    this.varSharedDataS = this.dataShareS.getSharedDataS();
+  }
 }

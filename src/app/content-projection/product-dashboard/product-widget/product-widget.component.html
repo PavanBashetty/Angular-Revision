@@ -11,7 +11,7 @@
             <ng-container *ngFor="let product of products; let i=index">
                 <tr>
                     <td>{{product.product}}</td>
-                    <td>{{product.price}}</td>
+                    <td>{{product.price | currency:'EUR'}}</td>
                 </tr>
             </ng-container>
         </tbody>

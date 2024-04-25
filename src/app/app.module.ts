@@ -36,6 +36,10 @@ import { SingleSlotComponent } from './content-projection/single-slot/single-slo
 import { MultiSlotComponent } from './content-projection/multi-slot/multi-slot.component';
 import { ProductDashboardComponent } from './content-projection/product-dashboard/product-dashboard.component';
 import { ProductWidgetComponent } from './content-projection/product-dashboard/product-widget/product-widget.component';
+import { DirectivesComponent } from './directives/directives.component';
+import { CustomComponent } from './directives/custom/custom.component';
+import { StructuralComponent } from './directives/structural/structural.component';
+import { AttributeComponent } from './directives/attribute/attribute.component';
 
 @NgModule({
   declarations: [
@@ -55,7 +59,11 @@ import { ProductWidgetComponent } from './content-projection/product-dashboard/p
     SingleSlotComponent,
     MultiSlotComponent,
     ProductDashboardComponent,
-    ProductWidgetComponent
+    ProductWidgetComponent,
+    DirectivesComponent,
+    CustomComponent,
+    StructuralComponent,
+    AttributeComponent
   ],
   imports: [
     BrowserModule,
