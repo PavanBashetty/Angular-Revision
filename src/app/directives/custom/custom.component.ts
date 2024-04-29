@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 })
 export class CustomComponent {
 
+  onlyForIf:boolean = true;
+  constructor(){}
+
+  ngOnInit(){}
+
+  changeConditionValues(){
+    this.onlyForIf = !this.onlyForIf;
+  }
 }

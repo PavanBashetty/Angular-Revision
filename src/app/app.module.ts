@@ -40,6 +40,11 @@ import { DirectivesComponent } from './directives/directives.component';
 import { CustomComponent } from './directives/custom/custom.component';
 import { StructuralComponent } from './directives/structural/structural.component';
 import { AttributeComponent } from './directives/attribute/attribute.component';
+import { HighlightBackground } from './_customdirectives/app-highlight.directive';
+import { ClickBackgroundHighlight } from './_customdirectives/app-clickbackground.directive';
+import { MouseHover } from './_customdirectives/app-mousehover.directive';
+import { showElementViaIf } from './_customdirectives/app-myOwnIf.directive';
+import { showElementViaIfElse } from './_customdirectives/app-customIfElse.directive';
 
 @NgModule({
   declarations: [
@@ -63,7 +68,12 @@ import { AttributeComponent } from './directives/attribute/attribute.component';
     DirectivesComponent,
     CustomComponent,
     StructuralComponent,
-    AttributeComponent
+    AttributeComponent,
+    HighlightBackground,
+    ClickBackgroundHighlight,
+    MouseHover,
+    showElementViaIf,
+    showElementViaIfElse
   ],
   imports: [
     BrowserModule,
