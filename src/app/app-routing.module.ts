@@ -8,6 +8,9 @@ import { DirectivesComponent } from './directives/directives.component';
 import { StructuralComponent } from './directives/structural/structural.component';
 import { AttributeComponent } from './directives/attribute/attribute.component';
 import { CustomComponent } from './directives/custom/custom.component';
+import { FormsOverviewComponent } from './forms-overview/forms-overview.component';
+import { TemplateDrivenComponent } from './forms-overview/template-driven/template-driven.component';
+import { ReactiveComponent } from './forms-overview/reactive/reactive.component';
 
 const routes: Routes = [
   {path:'', redirectTo:'/basics', pathMatch:'full'},
@@ -24,6 +27,13 @@ const routes: Routes = [
       {path:'structural', component:StructuralComponent},
       {path:'attribute', component:AttributeComponent},
       {path:'custom', component:CustomComponent}
+    ]
+  },
+  {
+    path:'forms', component:FormsOverviewComponent,
+    children: [
+      {path:'template-driven', component:TemplateDrivenComponent},
+      {path:'reactive', component:ReactiveComponent}
     ]
   },
   {path:'**', component:PageNotFoundComponent}

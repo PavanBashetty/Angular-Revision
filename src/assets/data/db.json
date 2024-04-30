@@ -1,0 +1,27 @@
+{
+  "favoriteMovies": [
+    {
+      "id": "ebf2",
+      "movieName": "The dark knight",
+      "movieRating": 9
+    }
+  ],
+  "studentsData": [
+    {
+      "id": "65af",
+      "firstName": "Pavan",
+      "lastName": "Bashetty",
+      "age": 31,
+      "address": {
+        "street": "BS",
+        "city": "HD",
+        "zipcode": 69,
+        "country": "DE"
+      },
+      "aliases": [
+        "PRB",
+        "Pav"
+      ]
+    }
+  ]
+}

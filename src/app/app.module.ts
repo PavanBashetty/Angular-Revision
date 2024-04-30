@@ -45,6 +45,9 @@ import { ClickBackgroundHighlight } from './_customdirectives/app-clickbackgroun
 import { MouseHover } from './_customdirectives/app-mousehover.directive';
 import { showElementViaIf } from './_customdirectives/app-myOwnIf.directive';
 import { showElementViaIfElse } from './_customdirectives/app-customIfElse.directive';
+import { FormsOverviewComponent } from './forms-overview/forms-overview.component';
+import { TemplateDrivenComponent } from './forms-overview/template-driven/template-driven.component';
+import { ReactiveComponent } from './forms-overview/reactive/reactive.component';
 
 @NgModule({
   declarations: [
@@ -73,7 +76,10 @@ import { showElementViaIfElse } from './_customdirectives/app-customIfElse.direc
     ClickBackgroundHighlight,
     MouseHover,
     showElementViaIf,
-    showElementViaIfElse
+    showElementViaIfElse,
+    FormsOverviewComponent,
+    TemplateDrivenComponent,
+    ReactiveComponent
   ],
   imports: [
     BrowserModule,
