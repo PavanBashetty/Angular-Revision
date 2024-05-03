@@ -1,6 +1,6 @@
 import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
-import { Observable } from "rxjs";
+import { Observable, firstValueFrom } from "rxjs";
 import { favMovie } from "../_classes/favMovie";
 import { newStudent } from "../_classes/studentList";
 
@@ -46,5 +46,20 @@ export class ApiService {
     }
     searchStudent(studentName:string):Observable<newStudent[]>{
         return this.http.get<newStudent[]>(`${this.apiURL}/studentsData?firstName=${studentName}`)
+    }
+
+    //this method returns a promise instead of an observable. Inside this method, we use await to asynchronously wait for the HTTP request to complete and return the result.
+    // HTTP request using this.http.get(), it returns an observable of the HTTP response. Then for testing we convert this observable to promise. Earlier it was done using toPromise() but it is now deprecated so we use firstValueFrom instead
+
+    async getStudentListViaPromise(): Promise<newStudent[]>{
+        try{
+            const data = await firstValueFrom(this.http.get<newStudent[]>(`${this.apiURL}/studentsData`));
+            if(data === undefined){
+                throw new Error('Received undefined data from server');
+            }
+            return data;
+        }catch(error){
+            throw error;
+        }
     }
 }
