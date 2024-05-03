@@ -4,6 +4,11 @@
       "id": "ebf2",
       "movieName": "The dark knight",
       "movieRating": 9
+    },
+    {
+      "id": "e3cf",
+      "movieName": "Dragon ball",
+      "movieRating": 8
     }
   ],
   "studentsData": [

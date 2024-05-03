@@ -48,6 +48,11 @@ import { showElementViaIfElse } from './_customdirectives/app-customIfElse.direc
 import { FormsOverviewComponent } from './forms-overview/forms-overview.component';
 import { TemplateDrivenComponent } from './forms-overview/template-driven/template-driven.component';
 import { ReactiveComponent } from './forms-overview/reactive/reactive.component';
+import { RxjsOverviewComponent } from './rxjs-overview/rxjs-overview.component';
+import { AsyncPipeComponent } from './rxjs-overview/async-pipe/async-pipe.component';
+import { ObservablePromisesComponent } from './rxjs-overview/observable-promises/observable-promises.component';
+import { OperatorsComponent } from './rxjs-overview/operators/operators.component';
+import { SubjectsComponent } from './rxjs-overview/subjects/subjects.component';
 
 @NgModule({
   declarations: [
@@ -79,7 +84,12 @@ import { ReactiveComponent } from './forms-overview/reactive/reactive.component'
     showElementViaIfElse,
     FormsOverviewComponent,
     TemplateDrivenComponent,
-    ReactiveComponent
+    ReactiveComponent,
+    RxjsOverviewComponent,
+    AsyncPipeComponent,
+    ObservablePromisesComponent,
+    OperatorsComponent,
+    SubjectsComponent
   ],
   imports: [
     BrowserModule,
