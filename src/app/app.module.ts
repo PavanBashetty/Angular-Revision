@@ -53,6 +53,9 @@ import { AsyncPipeComponent } from './rxjs-overview/async-pipe/async-pipe.compon
 import { ObservablePromisesComponent } from './rxjs-overview/observable-promises/observable-promises.component';
 import { OperatorsComponent } from './rxjs-overview/operators/operators.component';
 import { SubjectsComponent } from './rxjs-overview/subjects/subjects.component';
+import { NgrxOverviewComponent } from './ngrx-overview/ngrx-overview.component';
+import { CounterComponent } from './ngrx-overview/counter/counter.component';
+import { ExtrasComponent } from './extras/extras.component';
 
 @NgModule({
   declarations: [
@@ -89,7 +92,10 @@ import { SubjectsComponent } from './rxjs-overview/subjects/subjects.component';
     AsyncPipeComponent,
     ObservablePromisesComponent,
     OperatorsComponent,
-    SubjectsComponent
+    SubjectsComponent,
+    NgrxOverviewComponent,
+    CounterComponent,
+    ExtrasComponent
   ],
   imports: [
     BrowserModule,

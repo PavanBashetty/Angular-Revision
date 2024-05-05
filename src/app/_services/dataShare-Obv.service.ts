@@ -15,4 +15,5 @@ export class dataShareObservables{
     updateDataO(newDataO:string){
         this.dataSubject.next(newDataO)
     }
+
 }

@@ -16,13 +16,19 @@ import { ObservablePromisesComponent } from './rxjs-overview/observable-promises
 import { AsyncPipeComponent } from './rxjs-overview/async-pipe/async-pipe.component';
 import { OperatorsComponent } from './rxjs-overview/operators/operators.component';
 import { SubjectsComponent } from './rxjs-overview/subjects/subjects.component';
+import { NgrxOverviewComponent } from './ngrx-overview/ngrx-overview.component';
+import { CounterComponent } from './ngrx-overview/counter/counter.component';
+import { ExtrasComponent } from './extras/extras.component';
+import { NoAccessComponent } from './no-access/no-access.component';
+import { authGuard } from './_auth/auth.guard';
 
 const routes: Routes = [
   {path:'', redirectTo:'/basics', pathMatch:'full'},
   {
     path:'basics', component:BasicsComponent,
     children:[
-      {path:'pipes', component:PipesComponent}
+      {path:'pipes', component:PipesComponent, canActivate:[authGuard]},
+      {path:'no-access', component:NoAccessComponent}
     ]
   },
   {path:'contentProjection', component:ContentProjectionComponent},
@@ -50,6 +56,13 @@ const routes: Routes = [
       {path:'subjects', component:SubjectsComponent}
     ]
   },
+  {
+    path:'ngrx', component:NgrxOverviewComponent,
+    children:[
+      {path:'counter', component:CounterComponent}
+    ]
+  },
+  {path:'extras', component:ExtrasComponent},
   {path:'**', component:PageNotFoundComponent}
 ];
 

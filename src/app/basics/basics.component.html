@@ -31,7 +31,10 @@
         </div>
         <div class="grid">
             <div class="row">
-                pipe btn
+                <button mat-raised-button color="accent" (click)="authorizePipe()" [hidden]="toggleAuthBtns">Authorize Pipes</button>
+                <button mat-raised-button color="warn" (click)="removeAuthAccess()"  [hidden]="!toggleAuthBtns">Remove auth access</button>
+                <p class="success-p" [hidden]="!currentPipeAuthState" style="text-align: center;">Pipe route is now accessible</p>
+                <p class="error-p" style="text-align: center;" [hidden]="!removePipeAuthAccess">Pipe route access revoked</p>
             </div>
         </div>
     </mat-card>

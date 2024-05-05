@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { dataShareService } from '../_services/dataShare-ser.service';
 import { dataShareObservables } from '../_services/dataShare-Obv.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-basics',
@@ -18,12 +19,17 @@ export class BasicsComponent {
   public varSharedDataS!:string;
   public varSharedDataO!:string;
 
-  constructor(private dataShareS:dataShareService, private dataShareO: dataShareObservables){}
+  public toggleAuthBtns:boolean = false;
+  public currentPipeAuthState:boolean = false;
+  public removePipeAuthAccess:boolean = false;
+
+  constructor(private dataShareS:dataShareService, private dataShareO: dataShareObservables, private router:Router){}
 
   ngOnInit(){
     this.varSharedDataS = this.dataShareS.getSharedDataS();
-
     this.dataShareO.data$.subscribe({next:(data)=>{this.varSharedDataO = data}});
+
+    localStorage.getItem('pipeAuth') == 'true' ? this.toggleAuthBtns = true : this.toggleAuthBtns = false;
   }
 
   updateDataS(){
@@ -33,5 +39,25 @@ export class BasicsComponent {
 
   updateDataO(){
     this.dataShareO.updateDataO('Shared data via Observable updated in basics component')
+  }
+
+  authorizePipe(){
+    this.currentPipeAuthState = true;
+    this.toggleAuthBtns = true;
+    localStorage.setItem('pipeAuth', 'true');
+    setTimeout(()=>{
+      this.currentPipeAuthState = false;
+    },2000);
+    this.router.navigate(['/basics']);
+  }
+
+  removeAuthAccess(){
+    this.removePipeAuthAccess = true;
+    this.toggleAuthBtns = false;
+    localStorage.clear();
+    setTimeout(()=>{
+      this.removePipeAuthAccess = false;
+    },2000);
+    this.router.navigate(['/basics']);
   }
 }
