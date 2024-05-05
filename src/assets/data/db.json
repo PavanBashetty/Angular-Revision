@@ -9,6 +9,11 @@
       "id": "e3cf",
       "movieName": "Dragon ball",
       "movieRating": 8
+    },
+    {
+      "id": "b48c",
+      "movieName": "up",
+      "movieRating": 8.5
     }
   ],
   "studentsData": [
@@ -59,6 +64,21 @@
         "king",
         "ass",
         "idiot"
+      ]
+    },
+    {
+      "id": "1de6",
+      "firstName": "Gohan",
+      "lastName": "Saiyan",
+      "age": 35,
+      "address": {
+        "street": "Im Wörtel 26",
+        "city": "Mannheim",
+        "zipcode": 68199,
+        "country": "Germany"
+      },
+      "aliases": [
+        "Super Sayian 2"
       ]
     }
   ]
