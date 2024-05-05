@@ -1,18 +1,16 @@
-# Concepts covered
-
-## Major concepts covered:
-
-### data sharing (via @Input()/@Output(), Services, Observables, NgRx).
-### binding.
-### directives, custom directives.
-### pipes, custom pipes.
-### content projection, customized content projection
-### Forms: Template driven form (using template reference variables), Reactive Forms
-### Routing: wildcard routes, route parameters, optional route parameters, child routes, Auth Guard
-### RxJS: Observables, (Observable vs Promises), Async pipe, Subject, BehaviourSubject, Operators (map, filter, debounceTime, switchMap, distinctUntilChanged, toArray)
-### NgRx
-### Angular Material
-### JSON Server
+## Concepts covered:
+Major concepts covered:
+- data sharing (via @Input()/@Output(), Services, Observables, NgRx).
+- binding.
+- directives, custom directives.
+- pipes, custom pipes.
+- content projection, customized content projection
+- Forms: Template driven form (using template reference variables), Reactive Forms
+- Routing: wildcard routes, route parameters, optional route parameters, child routes, Auth Guard
+- RxJS: Observables, (Observable vs Promises), Async pipe, Subject, BehaviourSubject, Operators (map, filter, debounceTime, switchMap, distinctUntilChanged, toArray)
+- NgRx
+- Angular Material
+- JSON Server
 
 # AngularRevision
 
