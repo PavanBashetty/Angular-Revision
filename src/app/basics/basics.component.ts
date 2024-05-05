@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { dataShareService } from '../_services/dataShare-ser.service';
 import { dataShareObservables } from '../_services/dataShare-Obv.service';
 import { Router } from '@angular/router';
+import { Store } from '@ngrx/store';
+import { updateStatement } from '../_stores/_simpleStatement/statement.actions';
 
 @Component({
   selector: 'app-basics',
@@ -18,18 +20,24 @@ export class BasicsComponent {
 
   public varSharedDataS!:string;
   public varSharedDataO!:string;
+  public varSharedDataN!:string;
 
   public toggleAuthBtns:boolean = false;
   public currentPipeAuthState:boolean = false;
   public removePipeAuthAccess:boolean = false;
 
-  constructor(private dataShareS:dataShareService, private dataShareO: dataShareObservables, private router:Router){}
+  constructor(private dataShareS:dataShareService, private dataShareO: dataShareObservables, private router:Router, private store:Store<{statement:string}>){}
 
   ngOnInit(){
     this.varSharedDataS = this.dataShareS.getSharedDataS();
     this.dataShareO.data$.subscribe({next:(data)=>{this.varSharedDataO = data}});
 
     localStorage.getItem('pipeAuth') == 'true' ? this.toggleAuthBtns = true : this.toggleAuthBtns = false;
+
+    //ngrx
+    this.store.select('statement').subscribe({
+      next:(data)=>{this.varSharedDataN = data}
+    })
   }
 
   updateDataS(){
@@ -39,6 +47,10 @@ export class BasicsComponent {
 
   updateDataO(){
     this.dataShareO.updateDataO('Shared data via Observable updated in basics component')
+  }
+
+  updateDataN(){
+    this.store.dispatch(updateStatement({newStatement:'Shared data via NgRx updated in basics component'}))
   }
 
   authorizePipe(){

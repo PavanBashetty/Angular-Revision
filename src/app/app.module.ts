@@ -56,6 +56,8 @@ import { SubjectsComponent } from './rxjs-overview/subjects/subjects.component';
 import { NgrxOverviewComponent } from './ngrx-overview/ngrx-overview.component';
 import { CounterComponent } from './ngrx-overview/counter/counter.component';
 import { ExtrasComponent } from './extras/extras.component';
+import { StoreModule } from '@ngrx/store';
+import { statementReducer } from './_stores/_simpleStatement/statement.reducer';
 
 @NgModule({
   declarations: [
@@ -114,7 +116,10 @@ import { ExtrasComponent } from './extras/extras.component';
     MatDialogModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    StoreModule.forRoot({
+      statement:statementReducer
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]
